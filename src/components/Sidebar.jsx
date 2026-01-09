@@ -1,16 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
+
 
 function Sidebar() {
+    const menuClass = ({ isActive }) =>
+        `nav-link rounded px-3 py-2 mb-2 ${isActive ? " bg-primary text-white" : "text-dark"}`;
     return (
-        <div style={{width: "200px", background: "#eee", padding: "10px"}} >
-            <h3>Menu</h3>
+        <aside className="bg-light border-end p-3" style={{ width: "250px", minHeight: "100vh" }}>
+            <h5 className="mb-4"
+            >Navigation</h5>
 
-            <ul style={{ listStyle: "none", padding: 0 }} >
-                <li><link to="/">Dashboard</link></li>
-                <li><link to="/orders">Orders</link></li>
-                <li><link to="/billing">Billing</link></li> 
-            </ul>
-        </div>
+            <nav className="nav flex-column">
+                <NavLink to="/" className={menuClass}>
+                    Dashboard
+                </NavLink>
+                <NavLink to="/orders" className={menuClass}>
+                    Orders
+                </NavLink>
+                <NavLink to="/billing" className={menuClass}>
+                    Billing
+                </NavLink>
+            </nav>
+        </aside>
     );
 }
 

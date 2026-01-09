@@ -10,15 +10,16 @@ function App() {
     <div>
       <Header/>
 
-      <div style={{ display: "flex" }} >
+      <div className="d.flex" >
         <Sidebar />
-        <div style={{ flex: 1, padding: "20px" }} >
+        
+        <main className="flex-grow-1 p-4 bg-body-tertiary" style={{minHeight: "100vh"}}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/billing" element={<Billing />} />
           </Routes>
-          </div>
+        </main>
         </div>
     </div>
   );
