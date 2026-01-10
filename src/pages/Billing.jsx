@@ -26,7 +26,7 @@ function Billing() {
                                     <th>Payment Status</th>
                                 </tr>
                             </thead>
-                            <tbodt>
+                            <tbody>
                                 {bills.map((bill) => (
                                     <tr key={bill.id}>
                                         <td>{bill.id}</td>
@@ -35,7 +35,7 @@ function Billing() {
                                         <td>{bill.status}</td>
                                     </tr>
                                 ))}
-                            </tbodt>
+                            </tbody>
                         </table>
                     </div>
                 </div>

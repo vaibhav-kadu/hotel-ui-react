@@ -16,7 +16,7 @@ function Orders() {
             <div className="card shadow-sm border-0">
                 <div className="card-body">
                     <div className="table-responsive">
-                        <tale className="table tale-hover align-middle">
+                        <table className="table tale-hover align-middle">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -35,7 +35,7 @@ function Orders() {
                                     </tr>
                                 ))}
                             </tbody>
-                        </tale>
+                        </table>
                     </div>
                 </div>
             </div>
